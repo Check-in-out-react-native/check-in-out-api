@@ -1,5 +1,8 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+
 require 'database.php';
 
 if (isset($_POST['nome_cliente'],$_POST['qtd_pessoas']))
