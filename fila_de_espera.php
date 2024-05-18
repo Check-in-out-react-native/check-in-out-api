@@ -6,7 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 require 'database.php';
 
 try {
-    $mesa= $conn->query('SELECT nome_cliente FROM clientes WHERE espera = 1');
+    $mesa= $conn->query('SELECT id_cliente, nome_cliente FROM clientes WHERE espera = 1');
     $rs = $mesa->fetchAll(PDO::FETCH_ASSOC);
     header('Content-Type: application/json');
     echo json_encode($rs);
